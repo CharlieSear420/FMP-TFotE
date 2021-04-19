@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player_Move : MonoBehaviour
 {
@@ -44,4 +45,17 @@ public class Player_Move : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
         
     }
+
+    
+    public void OnCollisionEnter(Collision collision)
+     {
+      	string objectname = collision.gameObject.tag;
+       	if (objectname == "bunker")
+       	{
+            Debug.Log ("victory");
+            Application.Quit();
+       	}
+        
+     }
+
 }
