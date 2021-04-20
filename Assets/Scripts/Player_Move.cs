@@ -49,8 +49,8 @@ public class Player_Move : MonoBehaviour
     
     public void OnCollisionEnter(Collision collision)
      {
-      	string objectname = collision.gameObject.tag;
-       	if (objectname == "bunker")
+      	string player = collision.gameObject.tag;
+       	if (player == "bunker")
        	{
             Debug.Log ("victory");
             Application.Quit();
