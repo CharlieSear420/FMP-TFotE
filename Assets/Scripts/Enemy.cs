@@ -10,10 +10,14 @@ public class Enemy : MonoBehaviour
     public float moveSpeed = 5f;
     
     
+
+    
+    
     // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody>();
+        
     }
 
     // Update is called once per frame
@@ -35,4 +39,6 @@ public class Enemy : MonoBehaviour
     {
         rb.MovePosition((Vector3)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
+
+    
 }
