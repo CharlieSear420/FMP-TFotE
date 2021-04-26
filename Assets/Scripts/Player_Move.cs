@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player_Move : MonoBehaviour
 {
@@ -71,7 +72,8 @@ public class Player_Move : MonoBehaviour
        	if (player == "bunker")
        	{
             Debug.Log ("victory");
-            Application.Quit();
+            //Application.Quit();
+            SceneManager.LoadScene("Victory");
        	}
 
         string person = collision.gameObject.tag;
@@ -91,6 +93,9 @@ public class Player_Move : MonoBehaviour
         if (currentHealth == 0f)
         {
             Debug.Log("dead");
+            //Application.Quit();
+            //UnityEditor.EditorApplication.isPlaying = false;
+            SceneManager.LoadScene("Death");
         }
     }
 
