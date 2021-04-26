@@ -10,12 +10,18 @@ public class pause_menu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
 
     }
 
     
-
+    public void mouseActivate()
+    {
+        
+    }
     
 
     
