@@ -78,7 +78,7 @@ public class Player_Move : MonoBehaviour
        	if (player == "enemy")
        	{
             Debug.Log ("damage taken");
-            TakeDamage(20);
+            TakeDamage(5);
        	}
         
     }
@@ -87,6 +87,11 @@ public class Player_Move : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+
+        if (currentHealth == 0f)
+        {
+            Debug.Log("dead");
+        }
     }
 
 }
