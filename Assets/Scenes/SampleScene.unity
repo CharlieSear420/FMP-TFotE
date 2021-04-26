@@ -138,7 +138,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.2
-  m_Speed: 2
+  m_Speed: 4
   m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f32ae124a294b654c8535c87a6c02304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 10
+  lookRadius: 25
 --- !u!65 &63539063
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -362,7 +362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f32ae124a294b654c8535c87a6c02304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 10
+  lookRadius: 25
 --- !u!65 &337507194
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -397,6 +397,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 402488, guid: 1d96687606641d8448ec351d83deb5a3, type: 3}
   m_PrefabInstance: {fileID: 547781170}
   m_PrefabAsset: {fileID: 0}
+--- !u!195 &337507198
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337507192}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.3
+  m_Speed: 6
+  m_Acceleration: 20
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 2
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.5
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &427724338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3956,7 +3978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 178252, guid: 1d96687606641d8448ec351d83deb5a3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 402488, guid: 1d96687606641d8448ec351d83deb5a3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4668,7 +4690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f32ae124a294b654c8535c87a6c02304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 10
+  lookRadius: 25
 --- !u!65 &1618445435
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4707,8 +4729,8 @@ NavMeshAgent:
   m_GameObject: {fileID: 1618445433}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.2
-  m_Speed: 2
+  m_Radius: 1
+  m_Speed: 3
   m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -4716,7 +4738,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 4
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -4838,7 +4860,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -232.22, y: -153.71}
+  m_AnchoredPosition: {x: -195, y: -143}
   m_SizeDelta: {x: 101.555786, y: 17.576963}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1706250796
