@@ -63,9 +63,11 @@ public class Player_Move : MonoBehaviour
     }
 
     
-    public void OnCollisionEnter(Collision collision)
+    //void OnCollisionEnter(Collision collision)
+    public void OnControllerColliderHit(ControllerColliderHit collision)
     {
       	string player = collision.gameObject.tag;
+        print (player);
        	if (player == "bunker")
        	{
             Debug.Log ("victory");
