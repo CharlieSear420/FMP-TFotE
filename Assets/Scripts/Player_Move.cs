@@ -18,6 +18,16 @@ public class Player_Move : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
 
+    public int maxHealth = 100;
+    public int currentHealth;
+    public health healthBar;
+
+
+    void start()
+    {
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+    }
 
     void Update()
     {
@@ -43,19 +53,38 @@ public class Player_Move : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+
+        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            TakeDamage(20);
+        }
         
     }
 
     
     public void OnCollisionEnter(Collision collision)
-     {
+    {
       	string player = collision.gameObject.tag;
        	if (player == "bunker")
        	{
             Debug.Log ("victory");
             Application.Quit();
        	}
+
+        string person = collision.gameObject.tag;
+       	if (player == "enemy")
+       	{
+            Debug.Log ("damage taken");
+            TakeDamage(20);
+       	}
         
-     }
+    }
+    
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
+    }
 
 }
