@@ -1,43 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    public Transform player;
-    private Rigidbody rb;
-    private Vector3 movement;
-    public float moveSpeed = 5f;
     
+    public float lookRadius = 10f;
     
-
+    Transform target;
+    NavMeshAgent agent;
     
     
     // Start is called before the first frame update
     void Start()
     {
-        rb = this.GetComponent<Rigidbody>();
+        target = PlayerManager.instance.player.transform;
+        
+        agent = GetComponent<NavMeshAgent>();
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 direction = player.position - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        rb.rotation = Quaternion.Euler(0f,angle,0f);
-        direction.Normalize();
-        movement = direction;
+        float distance = Vector3.Distance(target.position, transform.position);
+
+        if (distance <= lookRadius)
+        {
+            agent.SetDestination(target.position);
+        }
+
+
     }
 
-    private void FixedUpdate()
+    void OnDrawGizmosSelected()
     {
-        moveCharacter(movement);
-    }
-
-    void moveCharacter(Vector3 direction)
-    {
-        rb.MovePosition((Vector3)transform.position + (direction * moveSpeed * Time.deltaTime));
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, lookRadius);
     }
 
     
