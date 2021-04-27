@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Hard.unity
     guid: a98e3a51cf7bd964f9ef44b1ec17e6c0
   - enabled: 1
+    path: Assets/Scenes/Insane.unity
+    guid: 6332bf6a0767301418063e8d62bc0c11
+  - enabled: 1
     path: Assets/Scenes/Medium.unity
     guid: b63c44b26876d80469d726d7927516fb
   - enabled: 1
