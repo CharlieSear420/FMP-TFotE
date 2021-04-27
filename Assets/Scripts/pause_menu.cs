@@ -56,6 +56,11 @@ public class pause_menu : MonoBehaviour
         SceneManager.LoadScene("Hard");
     }
 
+    public void Insane()
+    {
+        SceneManager.LoadScene("Insane");
+    }
+
     public void Menu()
     {
         SceneManager.LoadScene("Menu");
