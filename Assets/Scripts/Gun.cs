@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Gun : MonoBehaviour
 {
@@ -7,7 +8,8 @@ public class Gun : MonoBehaviour
 
     public Camera fpsCam;
     public ParticleSystem muzzleFlash;
-
+    public int counterNum = 0;
+    public Text scoreText;
     
     
     // Update is called once per frame
@@ -18,6 +20,9 @@ public class Gun : MonoBehaviour
             Shoot();
         }
 
+        //string myString = myInt.ToString();
+        scoreText.text = counterNum.ToString();
+        
 
     }
 
@@ -34,6 +39,7 @@ public class Gun : MonoBehaviour
             if (target != null)
             {
                 target.TakeDamage(damage);
+                counterNum += 1;
             }
         }
 
