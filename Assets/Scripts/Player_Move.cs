@@ -56,10 +56,10 @@ public class Player_Move : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
 
         
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    TakeDamage(20);
-        //}
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            TakeDamage(20);
+        }
         
     }
 
@@ -83,6 +83,13 @@ public class Player_Move : MonoBehaviour
             TakeDamage(5);
        	}
         
+        string dude = collision.gameObject.tag;
+        if (player == "health pack")
+        {
+            Debug.Log("Health gained");
+            HealHealth(50);
+        }
+        
     }
     
     void TakeDamage(int damage)
@@ -97,6 +104,13 @@ public class Player_Move : MonoBehaviour
             //UnityEditor.EditorApplication.isPlaying = false;
             SceneManager.LoadScene("Death");
         }
+    }
+
+
+    void HealHealth (int heal)
+    {
+        currentHealth += heal;
+        healthBar.SetHealth(currentHealth);
     }
 
 }
