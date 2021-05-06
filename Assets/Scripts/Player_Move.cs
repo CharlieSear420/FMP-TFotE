@@ -87,7 +87,7 @@ public class Player_Move : MonoBehaviour
         if (player == "health pack")
         {
             Debug.Log("Health gained");
-            HealHealth(50);
+            HealHealth(10);
         }
         
     }
