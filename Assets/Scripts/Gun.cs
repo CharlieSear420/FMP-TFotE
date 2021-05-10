@@ -13,6 +13,8 @@ public class Gun : MonoBehaviour
 
     public float ammo = 50f;
     public Text ammoText;
+
+    public GameObject reloadText;
     
     
     // Update is called once per frame
@@ -28,6 +30,16 @@ public class Gun : MonoBehaviour
         {
             Reload();
         }
+
+        if (ammo == 0f)
+        {
+            reloadText.SetActive (true);
+        }
+        else
+        {
+            reloadText.SetActive (false);
+        }
+       
 
         //string myString = myInt.ToString();
         scoreText.text = counterNum.ToString();
