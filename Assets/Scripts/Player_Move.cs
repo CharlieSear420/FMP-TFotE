@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
 public class Player_Move : MonoBehaviour
 {
     public CharacterController controller;
@@ -57,10 +58,10 @@ public class Player_Move : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
 
         
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    TakeDamage(20);
-        //}
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            TakeDamage(20);
+        }
 
         //string myString = myInt.ToString();
         healthText.text = currentHealth.ToString();
@@ -91,7 +92,7 @@ public class Player_Move : MonoBehaviour
         if (player == "health pack")
         {
             Debug.Log("Health gained");
-            HealHealth(10);
+            HealHealth();
         }
         
     }
@@ -111,9 +112,9 @@ public class Player_Move : MonoBehaviour
     }
 
 
-    void HealHealth (int heal)
+    void HealHealth ()
     {
-        currentHealth += heal;
+        currentHealth = 100;
         healthBar.SetHealth(currentHealth);
     }
 

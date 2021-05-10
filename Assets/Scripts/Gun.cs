@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class Gun : MonoBehaviour
 {
@@ -24,6 +26,12 @@ public class Gun : MonoBehaviour
         {
             Shoot();
             ammo -= 1;
+            AudioManager.instance.Play("Gunshot");
+        }
+
+        if (Input.GetButtonDown("Fire1") && ammo == 0f)
+        {
+            AudioManager.instance.Play("Empty Gun");
         }
 
         if (Input.GetKeyDown(KeyCode.R))
