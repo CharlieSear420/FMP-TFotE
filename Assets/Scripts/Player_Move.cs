@@ -22,6 +22,7 @@ public class Player_Move : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public health healthBar;
+    public Text healthText;
 
 
     void start()
@@ -60,6 +61,9 @@ public class Player_Move : MonoBehaviour
         {
             TakeDamage(20);
         }
+
+        //string myString = myInt.ToString();
+        healthText.text = currentHealth.ToString();
         
     }
 
