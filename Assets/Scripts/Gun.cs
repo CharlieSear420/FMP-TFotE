@@ -10,19 +10,29 @@ public class Gun : MonoBehaviour
     public ParticleSystem muzzleFlash;
     public int counterNum = 0;
     public Text scoreText;
+
+    public float ammo = 50f;
+    public Text ammoText;
     
     
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && ammo >= 1f)
         {
             Shoot();
+            ammo -= 1;
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Reload();
         }
 
         //string myString = myInt.ToString();
         scoreText.text = counterNum.ToString();
         
+        ammoText.text = ammo.ToString();
 
     }
 
@@ -44,5 +54,11 @@ public class Gun : MonoBehaviour
         }
 
 
+    }
+
+    void Reload()
+    {
+        Debug.Log("reload");
+        ammo = 50f;
     }
 }
