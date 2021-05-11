@@ -17,6 +17,8 @@ public class Gun : MonoBehaviour
     public Text ammoText;
 
     public GameObject reloadText;
+
+  
     
     
     // Update is called once per frame
