@@ -11,7 +11,7 @@ public class HealthPack : MonoBehaviour
       	string HealthPack = collision.gameObject.tag;
        	if (HealthPack == "player")
        	{
-            Debug.Log ("collision");
+            Debug.Log ("HPcollision");
             HealthP.SetActive (false);
        	}
         

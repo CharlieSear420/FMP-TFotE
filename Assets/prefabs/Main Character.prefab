@@ -91,7 +91,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9121144825170922687}
   - component: {fileID: 8727529236986114455}
-  - component: {fileID: 8727529236986114152}
   - component: {fileID: 8727529236986114153}
   - component: {fileID: 8727529236986114154}
   m_Layer: 0
@@ -131,19 +130,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.881246, y: 1.40704, z: 0.89263916}
   m_Center: {x: 0.0057271323, y: 0.7262203, z: -0.015899658}
---- !u!65 &8727529236986114152
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8493507731943380485}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.97070444, y: 1.40704, z: 0.9990439}
-  m_Center: {x: 0.010960897, y: 0.7262203, z: 0.00047814846}
 --- !u!143 &8727529236986114153
 CharacterController:
   m_ObjectHideFlags: 0
@@ -183,6 +169,10 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 256
+  maxHealth: 100
+  currentHealth: 0
+  healthBar: {fileID: 0}
+  healthText: {fileID: 0}
 --- !u!1 &8727529236375952960
 GameObject:
   m_ObjectHideFlags: 0
