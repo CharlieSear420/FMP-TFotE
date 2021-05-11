@@ -26,17 +26,18 @@ public class Gun : MonoBehaviour
         {
             Shoot();
             ammo -= 1;
-            AudioManager.instance.Play("Gunshot");
+            FindObjectOfType<AudioManager>().Play("Gunshot");
         }
 
         if (Input.GetButtonDown("Fire1") && ammo == 0f)
         {
-            AudioManager.instance.Play("Empty Gun");
+            FindObjectOfType<AudioManager>().Play("EmptyGunshot");
         }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
             Reload();
+            FindObjectOfType<AudioManager>().Play("Reload");
         }
 
         if (ammo == 0f)
