@@ -4122,7 +4122,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "The zombies are a lot weaker than the rhinos and can only take two shots
-    to kill... \n\n(but you didnt hear that from me)"
+    to kill, howver they're twice as fast... \n\n(but you didnt hear that from me)"
 --- !u!222 &1691126486
 CanvasRenderer:
   m_ObjectHideFlags: 0
