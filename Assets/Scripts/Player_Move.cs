@@ -58,10 +58,7 @@ public class Player_Move : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
 
         
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    TakeDamage(20);
-        //}
+        
 
         //string myString = myInt.ToString();
         healthText.text = currentHealth.ToString();
