@@ -98,6 +98,7 @@ public class Player_Move : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+        FindObjectOfType<AudioManager>().Play("Damage");
 
         if (currentHealth == 0f)
         {
@@ -111,8 +112,10 @@ public class Player_Move : MonoBehaviour
 
     void HealHealth ()
     {
+        FindObjectOfType<AudioManager>().Play("Heal");
         currentHealth = 100;
         healthBar.SetHealth(currentHealth);
+        
     }
 
 }
